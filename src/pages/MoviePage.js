@@ -22,34 +22,113 @@ export default function MoviePage() {
   }, [imdbID]);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "row",
+        flexWrap: "wrap",
+      }}
+    >
       {movieData ? (
-        <div
-          style={{
-            border: "2px solid black",
-            width: "50vw",
-          }}
-        >
-          <h2>{movieData.Title}</h2>
-          <div className="details">
-            <img alt={movieData.Title} src={movieData.Poster} />
-            <div>
-              <h3>Director</h3>
-              <p>{movieData.Director}</p>
-              <h3>Cast</h3>
-              <p>{movieData.Actors}</p>
-              <h3>Language</h3>
-              <p>{movieData.Language}</p>
-              <h3>Plot</h3>
-              <p style={{ paddingLeft: 50, paddingRight: 50 }}>
+        <div>
+          <h2>
+            {movieData.Title} ({movieData.Year})
+          </h2>
+
+          {/* <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+              border: "1px solid black",
+              textAlign: "left",
+            }}
+          > */}
+          <div
+            style={{
+              border: "5px solid gray",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "row",
+              flexWrap: "wrap",
+            }}
+          >
+            <img
+              alt={movieData.Title}
+              src={movieData.Poster}
+              // style={{ maxWidth: "50vw" }}
+            />
+
+            <div
+              style={{
+                border: "1px solid gray",
+                display: "flex",
+                flexDirection: "column",
+                minWidth: "50vw",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "darkgray",
+                  color: "white",
+                }}
+              >
+                <h3 style={{ paddingLeft: 20, paddingRight: 20 }}>Director</h3>
+              </div>
+              <p style={{ paddingLeft: 20, paddingRight: 20 }}>
+                {movieData.Director}
+              </p>
+              <div
+                style={{
+                  backgroundColor: "darkgray",
+                  color: "white",
+                }}
+              >
+                <h3 style={{ paddingLeft: 20, paddingRight: 20 }}>Cast</h3>
+              </div>
+              <p style={{ paddingLeft: 20, paddingRight: 20 }}>
+                {movieData.Actors}
+              </p>
+              <div
+                style={{
+                  backgroundColor: "darkgray",
+                  color: "white",
+                }}
+              >
+                <h3 style={{ paddingLeft: 20, paddingRight: 20 }}>Language</h3>
+              </div>
+              <p style={{ paddingLeft: 20, paddingRight: 20 }}>
+                {movieData.Language}
+              </p>
+              <div
+                style={{
+                  backgroundColor: "darkgray",
+                  color: "white",
+                }}
+              >
+                <h3 style={{ paddingLeft: 20, paddingRight: 20 }}>Plot</h3>
+              </div>
+              <p style={{ paddingLeft: 20, paddingRight: 20 }}>
                 {movieData.Plot}
               </p>
-              <h3>IMDB Rating</h3>
-              <p>{movieData.imdbRating}</p>
+              <div
+                style={{
+                  backgroundColor: "darkgray",
+                  color: "white",
+                }}
+              >
+                <h3 style={{ paddingLeft: 20, paddingRight: 20 }}>
+                  IMDB Rating
+                </h3>
+              </div>
+              <p style={{ paddingLeft: 20, paddingRight: 20 }}>
+                {movieData.imdbRating}
+              </p>
             </div>
           </div>
         </div>
       ) : (
+        // </div>
         <p>Loading....</p>
       )}
     </div>
