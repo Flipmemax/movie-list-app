@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div className="NavBarStyle">
       <NavLink
-        activeStyle={{ fontWeight: "bold", color: "gray" }}
+        activeStyle={{ fontWeight: "bold", color: "darkred" }}
         style={{ textDecoration: "none", fontSize: "20px", color: "black" }}
         to="/"
         exact
@@ -14,7 +14,7 @@ export default function NavBar() {
       </NavLink>
       {" - "}
       <NavLink
-        activeStyle={{ fontWeight: "bold", color: "gray" }}
+        activeStyle={{ fontWeight: "bold", color: "darkred" }}
         style={{ textDecoration: "none", fontSize: "20px", color: "black" }}
         to="/about"
       >
@@ -22,7 +22,7 @@ export default function NavBar() {
       </NavLink>
       {" - "}
       <NavLink
-        activeStyle={{ fontWeight: "bold", color: "gray" }}
+        activeStyle={{ fontWeight: "bold", color: "darkred" }}
         style={{ textDecoration: "none", fontSize: "20px", color: "black" }}
         to="/discover"
       >

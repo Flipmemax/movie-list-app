@@ -10,6 +10,7 @@ export default function MovieItem({ movie }) {
       }}
     >
       <h3 style={{ padding: 20 }}>{movie.Title}</h3>
+      <h5>IMDB ID:</h5>
       <p>{movie.imdbID}</p>
       <Link to={`/movie/${movie.imdbID}`}>
         {/* <br /> (IMDB ID: {movie.imdbID}) */}

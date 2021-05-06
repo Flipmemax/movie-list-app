@@ -22,9 +22,14 @@ export default function MoviePage() {
   }, [imdbID]);
 
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       {movieData ? (
-        <div style={{ border: "2px solid black" }}>
+        <div
+          style={{
+            border: "2px solid black",
+            width: "50vw",
+          }}
+        >
           <h2>{movieData.Title}</h2>
           <div className="details">
             <img alt={movieData.Title} src={movieData.Poster} />

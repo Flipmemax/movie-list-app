@@ -9,7 +9,9 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <div className="centerItems">
+        <NavBar />
+      </div>
       <Switch>
         <Route path="/movie/:imdbID" component={MoviePage} />
         <Route path="/discover/:searchtext?" component={DiscoverMoviesPage} />
