@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import DiscoverMoviesPage from "./pages/DiscoverMoviesPage";
+import MoviePage from "./pages/MoviePage";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route path="./Discover" component={DiscoverMoviesPage} />
+        <Route path="/movie/:imdbID" component={MoviePage} />
+        <Route path="/discover/:searchtext?" component={DiscoverMoviesPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/" component={HomePage} />
       </Switch>
