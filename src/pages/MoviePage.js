@@ -46,25 +46,21 @@ export default function MoviePage() {
           > */}
           <div
             style={{
-              border: "5px solid gray",
               display: "flex",
               justifyContent: "center",
               flexDirection: "row",
               flexWrap: "wrap",
             }}
           >
-            <img
-              alt={movieData.Title}
-              src={movieData.Poster}
-              // style={{ maxWidth: "50vw" }}
-            />
-
+            <div>
+              <img alt={movieData.Title} src={movieData.Poster} />
+            </div>
             <div
               style={{
-                border: "1px solid gray",
                 display: "flex",
                 flexDirection: "column",
                 minWidth: "50vw",
+                maxWidth: "70vw",
               }}
             >
               <div
@@ -120,10 +116,10 @@ export default function MoviePage() {
                 <h3 style={{ paddingLeft: 20, paddingRight: 20 }}>
                   IMDB Rating
                 </h3>
+                <p style={{ paddingLeft: 20, paddingRight: 20 }}>
+                  {movieData.imdbRating}
+                </p>
               </div>
-              <p style={{ paddingLeft: 20, paddingRight: 20 }}>
-                {movieData.imdbRating}
-              </p>
             </div>
           </div>
         </div>
